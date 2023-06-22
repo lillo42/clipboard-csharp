@@ -125,20 +125,15 @@ public class UnixClipboard : IClipboard
 
         using var process = new Process();
         process.StartInfo.FileName = _copy.command;
-
-        if (!string.IsNullOrEmpty(_copy.args))
-        {
-            process.StartInfo.Arguments = _copy.args;
-        }
-
+        process.StartInfo.Arguments = _copy.args;
         process.StartInfo.UseShellExecute = false;
         process.StartInfo.RedirectStandardInput = true;
 
         process.Start();
         process.StandardInput.WriteLine(text);
         process.StandardInput.Flush();
-        process.WaitForExit(1_000);
-        process.Kill();
+        process.StandardInput.Close();
+        process.WaitForExit();
     }
 
     /// <inheritdoc cref="IClipboard.WriteAsync"/>
@@ -151,18 +146,14 @@ public class UnixClipboard : IClipboard
 
         using var process = new Process();
         process.StartInfo.FileName = _copy.command;
-
-        if (!string.IsNullOrEmpty(_copy.args))
-        {
-            process.StartInfo.Arguments = _copy.args;
-        }
-
+        process.StartInfo.Arguments = _copy.args;
         process.StartInfo.UseShellExecute = false;
         process.StartInfo.RedirectStandardInput = true;
-        
+
         process.Start();
-        await process.StandardInput.WriteLineAsync(text.AsMemory(), cancellationToken).ConfigureAwait(false);
+        await process.StandardInput.WriteAsync(text.AsMemory(), cancellationToken).ConfigureAwait(false);
         await process.StandardInput.FlushAsync().ConfigureAwait(false);
+        process.StandardInput.Close();
         await process.WaitForExitAsync(cancellationToken).ConfigureAwait(false);
     }
 }

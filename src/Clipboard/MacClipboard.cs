@@ -41,7 +41,8 @@ public class MacClipboard : IClipboard
         process.Start();
         process.StandardInput.Write(text);
         process.StandardInput.Flush();
-        process.Close();
+        process.StandardInput.Close();
+        process.WaitForExit();
     }
 
     /// <inheritdoc cref="IClipboard.WriteAsync"/>
@@ -54,6 +55,7 @@ public class MacClipboard : IClipboard
         process.Start();
         await process.StandardInput.WriteAsync(text).ConfigureAwait(false);
         await process.StandardInput.FlushAsync().ConfigureAwait(false);
-        process.Close();
+        process.StandardInput.Close();
+        await process.WaitForExitAsync(cancellationToken).ConfigureAwait(false);
     }
 }
