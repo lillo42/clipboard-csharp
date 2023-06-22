@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>$(AppTargetFramework)</TargetFramework>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>dotpaste</ToolCommandName>
+    <PackageTags>clipboard paste</PackageTags>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Clipboard\Clipboard.csproj" />
+  </ItemGroup>
+
+</Project>

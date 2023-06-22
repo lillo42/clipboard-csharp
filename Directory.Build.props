@@ -8,11 +8,11 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 
     <Authors>Rafael Lillo</Authors>
-<!--    <PackageIcon>icon.jpg</PackageIcon>-->
+    <PackageIcon>icon.png</PackageIcon>
 
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <PackageProjectUrl>https://github.com/lillo42/tutu</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/lillo42/tutu.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/lillo42/clipboard-csharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lillo42/clipboard-csharp.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
     <IncludeSymbols>true</IncludeSymbols>
@@ -21,8 +21,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
-  <!--<ItemGroup>
-    <None Include="../../icon.jpg" Pack="true" PackagePath="/"/>
-  </ItemGroup>-->
+  <ItemGroup>
+    <None Include="../../icon.png" Pack="true" PackagePath="/"/>
+  </ItemGroup>
 
 </Project>
