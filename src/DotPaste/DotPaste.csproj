@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>$(AppTargetFramework)</TargetFramework>
@@ -10,9 +10,13 @@
     <Title>dotpaste</Title>
     <Description>A cross platform clipboard paste tool for .NET 7.0</Description>
   </PropertyGroup>
-  
+
   <ItemGroup>
-    <ProjectReference Include="..\Clipboard\Clipboard.csproj" />
+    <ProjectReference Include="..\Clipboard\Clipboard.csproj"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="/"/>
   </ItemGroup>
 
 </Project>
