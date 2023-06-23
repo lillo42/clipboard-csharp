@@ -68,7 +68,7 @@ public partial class WindowsClipboard : IClipboard
     public Task<string> ReadAsync(CancellationToken cancellationToken = default) => Task.FromResult(Read());
 
     /// <inheritdoc cref="IClipboard.Write"/>
-    public void Write(string text)
+    public unsafe void Write(string text)
     {
         if (!IsClipboardFormatAvailable(CfUnicodeText))
         {
@@ -81,12 +81,11 @@ public partial class WindowsClipboard : IClipboard
             Marshal.ThrowExceptionForHR(Marshal.GetLastPInvokeError());
         }
 
-
         var data = Encoding.Unicode.GetBytes(text);
 
         // "If the hMem parameter identifies a memory object, the object must have
         // been allocated using the function with the GMEM_MOVEABLE flag."
-        var alloc = GlobalAlloc(GmemMoveable, (ulong)data.Length * sizeof(byte));
+        var alloc = GlobalAlloc(GmemMoveable, (ulong)(data.Length + 2));
         if (alloc == nint.Zero)
         {
             var ex = Marshal.GetExceptionForHR(Marshal.GetLastPInvokeError());
