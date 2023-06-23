@@ -6,6 +6,9 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotpaste</ToolCommandName>
     <PackageTags>clipboard paste</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Title>dotpaste</Title>
+    <Description>A cross platform clipboard paste tool for .NET 7.0</Description>
   </PropertyGroup>
   
   <ItemGroup>

@@ -67,6 +67,24 @@ public class UnixClipboard : IClipboard
         }
     }
 
+    /// <summary>
+    /// Initialize the <see cref="UnixClipboard"/> class.
+    /// </summary>
+    /// <param name="paste">The paste command.</param>
+    /// <param name="pasteArgs">The paste args.</param>
+    /// <param name="copy">The copy command.</param>
+    /// <param name="copyArgs">The copy args.</param>
+    /// <param name="trim">If it should trim.</param>
+    public UnixClipboard(string paste, string pasteArgs, 
+        string copy, string copyArgs,
+        bool trim = false)
+    {
+        _paste = (paste, pasteArgs);
+        _copy = (copy, copyArgs);
+        _trim = trim;
+        _unsupported = false;
+    }
+
     /// <inheritdoc cref="IClipboard.Read"/>
     public string Read()
     {
