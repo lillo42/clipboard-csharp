@@ -14,22 +14,23 @@ env:
   TERM: xterm
 
 jobs:
-  build-ubuntu:
-    name: build & tests on Ubuntu
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Build & Test
-        run: |
-          chmod +x ./build.sh
-          ./build.sh Tests
+# Dont support clipboard
+#  build-ubuntu:
+#    name: build & tests on Ubuntu
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#        with:
+#          fetch-depth: 0
+#
+#      - name: Build & Test
+#        run: |
+#          chmod +x ./build.sh
+#          ./build.sh Tests
   
   build-macos:
-    name: build & tests on Ubuntu
+    name: build & tests on MacOS 
     runs-on: macos-latest
     steps:
       - name: Checkout code
@@ -43,7 +44,7 @@ jobs:
           ./build.sh Tests
   
   build-windows:
-    name: build & tests on Ubuntu
+    name: build & tests on Windows 
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -51,6 +52,8 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3
+
       - name: Build & Test
-        run: |
-          ./build.ps1 Tests
+        run: ./build.ps1 Tests
