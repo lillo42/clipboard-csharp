@@ -68,7 +68,7 @@ public partial class WindowsClipboard : IClipboard
     public Task<string> ReadAsync(CancellationToken cancellationToken = default) => Task.FromResult(Read());
 
     /// <inheritdoc cref="IClipboard.Write"/>
-    public unsafe void Write(string text)
+    public void Write(string text)
     {
         if (!IsClipboardFormatAvailable(CfUnicodeText))
         {
