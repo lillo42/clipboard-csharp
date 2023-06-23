@@ -4,6 +4,7 @@
     <TargetFramework>$(AppTargetFramework)</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PackageId>Clipboard.CSharp</PackageId>
     <PackageTags>clipboard</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Title>Clipboard</Title>
