@@ -1,0 +1,59 @@
+name: Pull Request
+on:
+  pull_request:
+    branches: [ main ]
+
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+  DOTNET_MULTILEVEL_LOOKUP: 0
+  DOTNET_NOLOGO: true
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: 1
+  FORCE_COLOR: 3
+  TERM: xterm
+
+jobs:
+# Dont support clipboard
+#  build-ubuntu:
+#    name: build & tests on Ubuntu
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v3
+#        with:
+#          fetch-depth: 0
+#
+#      - name: Build & Test
+#        run: |
+#          chmod +x ./build.sh
+#          ./build.sh Tests
+  
+  build-macos:
+    name: build & tests on MacOS 
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Build & Test
+        run: |
+          chmod +x ./build.sh
+          ./build.sh Tests
+  
+  build-windows:
+    name: build & tests on Windows 
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v3
+
+      - name: Build & Test
+        run: ./build.ps1 Tests

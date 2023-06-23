@@ -1,0 +1,28 @@
+<Project>
+
+  <PropertyGroup>
+    <AppTargetFramework Condition="$(AppTargetFramework) == ''">net7.0</AppTargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <Authors>Rafael Lillo</Authors>
+    <PackageIcon>icon.png</PackageIcon>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageProjectUrl>https://github.com/lillo42/clipboard-csharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lillo42/clipboard-csharp.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../icon.png" Pack="true" PackagePath="/"/>
+  </ItemGroup>
+
+</Project>

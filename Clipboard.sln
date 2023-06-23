@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0AB18CA4-130E-4448-AA49-D55CA6FC9E01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipboard", "src\Clipboard\Clipboard.csproj", "{DB53E186-AFBB-49D5-AB8B-86732D5B7A10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{712281FE-79DE-48A9-AAF5-13960F2CB6C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clipboard.Tests", "tests\Clipboard.Tests\Clipboard.Tests.csproj", "{7B25227F-67D1-40DF-B5B9-70261CA7C4A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2EC8DFAB-4A96-46CB-AEA5-8E7884106A4E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		GitVersion.yml = GitVersion.yml
+		global.json = global.json
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{3C2E0B85-8002-4396-A61B-5EDE241C4EBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "samples\Examples\Examples.csproj", "{5824075B-3167-4F9C-8976-BEBE01113870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotCopy", "src\DotCopy\DotCopy.csproj", "{EF4E4DFE-88AA-4AF7-8E7D-DC5E86C966F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotPaste", "src\DotPaste\DotPaste.csproj", "{0B813800-BDFE-4FBA-A6FF-83B29CA93D1A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{2D1A5C0B-BCAC-41D5-AA09-67E404BC7837}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D1A5C0B-BCAC-41D5-AA09-67E404BC7837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D1A5C0B-BCAC-41D5-AA09-67E404BC7837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB53E186-AFBB-49D5-AB8B-86732D5B7A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB53E186-AFBB-49D5-AB8B-86732D5B7A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB53E186-AFBB-49D5-AB8B-86732D5B7A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB53E186-AFBB-49D5-AB8B-86732D5B7A10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B25227F-67D1-40DF-B5B9-70261CA7C4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B25227F-67D1-40DF-B5B9-70261CA7C4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B25227F-67D1-40DF-B5B9-70261CA7C4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B25227F-67D1-40DF-B5B9-70261CA7C4A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5824075B-3167-4F9C-8976-BEBE01113870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5824075B-3167-4F9C-8976-BEBE01113870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5824075B-3167-4F9C-8976-BEBE01113870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5824075B-3167-4F9C-8976-BEBE01113870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4E4DFE-88AA-4AF7-8E7D-DC5E86C966F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4E4DFE-88AA-4AF7-8E7D-DC5E86C966F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4E4DFE-88AA-4AF7-8E7D-DC5E86C966F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4E4DFE-88AA-4AF7-8E7D-DC5E86C966F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B813800-BDFE-4FBA-A6FF-83B29CA93D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B813800-BDFE-4FBA-A6FF-83B29CA93D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B813800-BDFE-4FBA-A6FF-83B29CA93D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B813800-BDFE-4FBA-A6FF-83B29CA93D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DB53E186-AFBB-49D5-AB8B-86732D5B7A10} = {0AB18CA4-130E-4448-AA49-D55CA6FC9E01}
+		{7B25227F-67D1-40DF-B5B9-70261CA7C4A1} = {712281FE-79DE-48A9-AAF5-13960F2CB6C9}
+		{5824075B-3167-4F9C-8976-BEBE01113870} = {3C2E0B85-8002-4396-A61B-5EDE241C4EBB}
+		{EF4E4DFE-88AA-4AF7-8E7D-DC5E86C966F4} = {0AB18CA4-130E-4448-AA49-D55CA6FC9E01}
+		{0B813800-BDFE-4FBA-A6FF-83B29CA93D1A} = {0AB18CA4-130E-4448-AA49-D55CA6FC9E01}
+	EndGlobalSection
+EndGlobal
