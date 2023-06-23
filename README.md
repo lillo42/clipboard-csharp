@@ -1,9 +1,9 @@
 # Clipboard for C# 
 
-Provide copying and pasting to the Clipboard for C#.
+`Clipboard` is a [C#](https://learn.microsoft.com/en-us/dotnet/csharp/) library to copying and pasting to the Clipboard. It is heavily inspired by the 
+`Go` library [clipboard](https://github.com/atotto/clipboard).
 
-Platforms:
-
+Supported OS:
 * OSX
 * Windows 10 (probably work on other Windows)
 * Linux/Unix (requires 'xclip' or 'xsel' command to be installed)
