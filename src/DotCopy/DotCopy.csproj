@@ -7,7 +7,7 @@
     <ToolCommandName>dotcopy</ToolCommandName>
     <PackageTags>clipboard copy</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Description>A cross platform clipboard paste tool for .NET 7.0</Description>
+    <Description>A cross platform clipboard paste tool for .NET 8.0</Description>
   </PropertyGroup>
 
   <ItemGroup>

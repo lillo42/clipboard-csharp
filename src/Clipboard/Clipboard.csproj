@@ -7,6 +7,7 @@
     <PackageId>Clipboard.CSharp</PackageId>
     <PackageTags>clipboard</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IsPackable>true</IsPackable>
     <Title>Clipboard</Title>
     <Description>Cross platform clipboard library in C#.</Description>
   </PropertyGroup>
